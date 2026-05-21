@@ -28,16 +28,17 @@
         <section class="about_me">
             <div class="inner">
                 <h2>ABOUT ME</h2>
-                <p>안녕하세요. 따뜻한 변화를 꿈꾸는<br>UXUI 디자이너가 되고 싶은 장윤주입니다.</p>
+                <p>안녕하세요. 배우는 자세와 배려 깊은 소통으로 팀원들과 조화를 이루며,<br>
+                    기획부터 퍼블리싱까지 주도적으로 확장해 나가는 디자이너가 되고 싶습니다.</p>
             </div>
         </section>
 
         <section class="profile">
             <div class="inner">
                 <p class="intro_txt">
-                    오랜기간 카페에서 일하면서 알게 된 것은 사용자의 불편함이었습니다.<br>단순히 예쁜 디자인 아니라, 누구나 쉽게 사용할 수 있는 흐름이 사용자에게 얼마나 필요한지
+                    "오랜기간 카페에서 일하면서 알게 된 것은 사용자의 불편함이었습니다.<br>단순히 예쁜 디자인 아니라, 누구나 쉽게 사용할 수 있는 흐름이 사용자에게 얼마나 필요한지
                     느꼈습니다.<br> 현장에서
-                    느꼈던 불편함을 관찰하던 눈을 이제는 피그마와 코드에 담아 누군가의 일상을 편리하게 만드는 디자이너가 되고싶습니다.
+                    느꼈던 불편함을 관찰하던 눈을 이제는 피그마와 코드에 담아 누군가의 일상을 편리하게 만드는 디자이너가 되고싶습니다."
                 </p>
 
                 <div class="introduce_myself">
@@ -155,18 +156,7 @@
             </div>
         </section>
     </div>
-    <script>
-        const revealEls = document.querySelectorAll('.scroll-reveal');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                }
-            });
-        }, { threshold: 0.3 });
-
-        revealEls.forEach(el => observer.observe(el));
-    </script>
+    <script src="../asset/script.js"></script>
 </body>
 
 </html>

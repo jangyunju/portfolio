@@ -230,11 +230,13 @@ header {
 }
 
 .profile p {
-    font-size: 13px;
+    font-size: 18px;
     color: rgba(0, 0, 0, 0.65);
     line-height: 1.8;
     text-align: center;
     letter-spacing: 0.3px;
+    width: 390px;
+    word-break: keep-all;
 }
 
 /* view more 버튼 — 라인 스타일 (btn-more와 동일한 규격) */
