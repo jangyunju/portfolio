@@ -1,0 +1,331 @@
+/* ========== RESET ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    width: 100%;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ========== INNER ========== */
+.inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 40px;
+    position: relative;
+}
+
+/* ========== ABOUT ME (Dark Section) ========== */
+.about_me {
+    background: #000;
+    color: #fff;
+    height: 100vh; /* 브라우저 화면 높이에 100% 꽉 차게 맞춤 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.about_me h2 {
+    font-size: 128px;
+    font-weight: 400;
+    margin-bottom: 40px;
+    letter-spacing: -2px;
+    color: rgba(0, 230, 255, 1);
+}
+
+.about_me p {
+    font-size: 1.4rem;
+    font-weight: 300;
+    opacity: 0.9;
+    word-break: keep-all;
+}
+
+/* ========== PROFILE (Light Section) ========== */
+.profile {
+    background: #E8E6E0;
+    padding: 150px 0;
+}
+
+.profile .intro_txt {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 120px;
+    color: #222;
+    font-weight: 500;
+    line-height: 1.8;
+}
+
+.introduce_myself {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 120px;
+    padding: 120px 0 120px;
+}
+
+/* 이미지 컨테이너 */
+.photo_wrap {
+    width: 500px;
+    flex-shrink: 0;
+}
+
+.photo_wrap img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* INTRODUCE — 이미지 왼쪽 상단 */
+.txt-left {
+    position: absolute;
+    top: 150px;
+    /* 아래로 내리려면 이 값을 키우세요 (예: 150px) */
+    left: 80px;
+    /* 오른쪽으로 밀려면 이 값을 키우세요 */
+    font-size: 96px;
+    font-weight: 400;
+    color: #111;
+    letter-spacing: -3px;
+    line-height: 1;
+    z-index: 10;
+}
+
+/* MYSELF — 이미지 오른쪽 하단 */
+.txt-right {
+    position: absolute;
+    bottom: 150px;
+    /* 위로 올리려면 이 값을 키우세요 (예: 150px) */
+    right: 180px;
+    /* 왼쪽으로 밀려면 이 값을 키우세요 */
+    font-size: 96px;
+    font-weight: 400;
+    color: #111;
+    letter-spacing: -3px;
+    line-height: 1;
+    z-index: 10;
+}
+
+/* ========== SCROLL REVEAL ========== */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scroll-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.txt-right.scroll-reveal {
+    transition-delay: 0.2s;
+}
+
+
+/* ========== INFO GRID ========== */
+.info_grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+    padding-top: 60px;
+    border-top: 2px solid #ddd;
+}
+
+.info_col {
+    flex: 1;
+}
+
+.info_list li {
+    margin-bottom: 45px;
+    font-size: 1.1rem;
+    color: #1a1a1a;
+}
+
+.info_list li strong {
+    display: inline-block;
+    width: 100%;
+    color: #000;
+    font-weight: 800;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+}
+
+.info_list li strong::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: rgba(0, 230, 255, 0.6);
+}
+
+.detail_item {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.detail_item:last-child {
+    margin-bottom: 0;
+}
+
+.detail_item .date {
+    display: block;
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.detail_item .desc {
+    display: block;
+    font-size: 1.05rem;
+    color: #333;
+    font-weight: 400;
+}
+
+/* ========== LIFE HISTORY ========== */
+.history {
+    background: #080808;
+    color: #fff;
+    padding: 180px 0;
+}
+
+.history h2 {
+    text-align: center;
+    font-size: 128px;
+    font-weight: 400;
+    letter-spacing: -2px;
+    color: rgba(0, 230, 255, 1);
+    margin-bottom: 150px;
+}
+
+.history_container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.history_container::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 230, 255, 0.6), transparent);
+    transform: translateX(-50%);
+    box-shadow: 0 0 15px rgba(0, 230, 255, 0.6);
+}
+
+.history_item {
+    position: relative;
+    width: 50%;
+    padding: 20px 50px;
+    margin-bottom: 50px;
+}
+
+.history_item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+.history_item:nth-child(even) {
+    left: 50%;
+    text-align: left;
+    margin-top: -30px;
+}
+
+.history_item .dot {
+    position: absolute;
+    top: 35px;
+    width: 16px;
+    height: 16px;
+    background: rgba(0, 230, 255, 1);
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0, 230, 255, 0.8);
+}
+
+.history_item:nth-child(odd) .dot {
+    right: -8px;
+}
+
+.history_item:nth-child(even) .dot {
+    left: -8px;
+}
+
+.history_item h3 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 15px;
+    color: rgba(0, 230, 255, 1);
+    text-shadow: 0 0 10px rgba(0, 230, 255, 0.3);
+}
+
+.history_item p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.7);
+    word-break: keep-all;
+    line-height: 1.5;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1440px) {
+    .inner {
+        width: 100%;
+        padding: 0 30px;
+    }
+
+    .introduce_myself strong {
+        font-size: 4rem;
+    }
+
+    .introduce_myself .photo_box {
+        width: 300px;
+        height: 380px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .history_container {
+        grid-template-columns: 1fr;
+    }
+
+    .history_container::before {
+        display: none;
+    }
+
+    .history_item:nth-child(odd),
+    .history_item:nth-child(even) {
+        text-align: left;
+        padding: 0;
+        margin-top: 0;
+        margin-bottom: 100px;
+    }
+
+    .history_item .img_box {
+        width: 100%;
+    }
+}

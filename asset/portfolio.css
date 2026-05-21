@@ -1,0 +1,491 @@
+/* ========== RESET & BASE ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    width: 100%;
+    font-family: 'Pretendard', 'Helvetica Neue', Arial, sans-serif;
+    background-color: #040C15;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ========== INNER ========== */
+.inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+/* ========== PORTFOLIO PROCESS MAIN ========== */
+.portfolio-process {
+    padding: 160px 0 0;
+}
+
+/* ========== SECTION COMMON ========== */
+.proc-section {
+    padding: 100px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.proc-section:last-child {
+    border-bottom: none;
+}
+
+/* h2 — 번호(span)는 위, 제목 텍스트는 아래 */
+.proc-section h2 {
+    font-size: 48px;
+    font-weight: 300;
+    letter-spacing: -1px;
+    color: #fff;
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    line-height: 1;
+}
+
+/* 번호 span */
+.proc-section h2 span {
+    font-size: 125px;
+    font-weight: 300;
+    font-style: italic;
+    color: rgba(0, 230, 255, 1);
+    letter-spacing: -4px;
+    line-height: 1;
+    display: block;
+}
+
+/* 설명 p */
+.proc-section>p {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.45);
+    letter-spacing: 0.3px;
+    margin-bottom: 96px;
+    line-height: 1.7;
+}
+
+/* ========== BRAINSTORMING IMAGE ========== */
+.brainstorming-img {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.brainstorming-img .bs-img {
+    width: 838px;
+    height: 668px;
+    border-radius: 100px;
+    display: block;
+    object-fit: cover;
+}
+
+/* ========== KEYWORD TAGS ========== */
+.keyword-tags {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    text-align: center;
+}
+
+.tag-row {
+    display: flex;
+    gap: 64px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.keyword-tags span {
+    display: inline-block;
+    padding: 14px 32px;
+    border: 1px solid rgba(0, 230, 255, 0.35);
+    color: rgba(0, 230, 255, 0.75);
+    font-size: 48px;
+    letter-spacing: -1px;
+    border-radius: 100px;
+    transition: all 0.3s;
+    line-height: 1;
+}
+
+.keyword-tags span:hover {
+    background: rgba(0, 230, 255, 0.1);
+    color: rgba(0, 230, 255, 1);
+    border-color: rgba(0, 230, 255, 0.6);
+}
+
+/* ========== INFORMATION ARCHITECTURE ========== */
+.ia-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+.ia-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+.ia-logo {
+    display: inline-block;
+    padding: 16px 48px;
+    background: rgba(0, 230, 255, 1);
+    color: #040C15;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border-radius: 100px;
+}
+
+/* 세로선: 로고 → 수평선 */
+.ia-tree-line {
+    width: 1.5px;
+    height: 40px;
+    background: rgba(0, 230, 255, 0.5);
+    margin: 0 auto;
+}
+
+.ia-grid {
+    display: flex;
+    gap: 0;
+    align-items: flex-start;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+}
+
+/* 수평선 — 첫/마지막 컬럼 중앙에 맞춤 (각 컬럼이 20%이므로 10%~90%) */
+.ia-grid::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 1.5px;
+    background: rgba(0, 230, 255, 0.5);
+}
+
+.ia-col {
+    flex: 1;
+    text-align: center;
+    padding: 0 16px;
+    position: relative;
+}
+
+/* 각 컬럼에서 수평선까지 세로선 */
+.ia-col::before {
+    content: '';
+    display: block;
+    width: 1.5px;
+    height: 36px;
+    background: rgba(0, 230, 255, 0.5);
+    margin: 0 auto 28px;
+}
+
+.ia-col h3 {
+    font-size: 28px;
+    font-weight: 400;
+    color: rgba(0, 230, 255, 0.9);
+    letter-spacing: -0.5px;
+    margin-bottom: 24px;
+}
+
+.ia-col ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.ia-col ul li {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.55);
+    letter-spacing: 0.3px;
+    line-height: 1.4;
+    transition: color 0.2s;
+}
+
+.ia-col ul li:hover {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* ========== FLOWCHART ========== */
+.flow-diagram {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+/* 왼쪽 HOME */
+.flow-home-left {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.flow-home-left::after {
+    content: '';
+    width: 50px;
+    height: 1.5px;
+    border-top: 1.5px dashed rgba(0, 230, 255, 0.4);
+}
+
+/* 오른쪽 HOME */
+.flow-home-right {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.flow-home-right::before {
+    content: '';
+    width: 50px;
+    height: 1.5px;
+    border-top: 1.5px dashed rgba(0, 230, 255, 0.4);
+}
+
+/* 중앙 트리 컨테이너 */
+.flow-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+/* 왼쪽 vertical dashed line — 첫 행(header) 중앙 ~ 마지막 행(footer) 중앙 */
+/* 각 행 높이 ≈ 52px, gap = 20px
+   header 중앙 = 26px
+   footer 중앙 = 전체 - 26px  → top:26px, bottom:26px */
+.flow-rows::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 28px;
+    /* 첫 행 중앙 */
+    bottom: 28px;
+    /* 마지막 행 중앙 */
+    width: 1.5px;
+    border-left: 1.5px dashed rgba(0, 230, 255, 0.4);
+}
+
+/* 오른쪽 vertical dashed line — about 행 중앙 ~ process 행 중앙
+   about = 3번째 행 (header26 + gap20 + visual52 + gap20 + about중앙26) = 144px
+   process = 6번째 행 (144 + 52 + 20 + skill52 + 20 + project52 + 20 + process중앙26) = 366px
+   bottom 기준: footer26px + gap20 + process절반 → bottom = 26 + 20 + 26 = 72px + process행+gap = 26+20+52+20+26 = 144px */
+.flow-rows::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 190px;
+    bottom: 110px;
+    width: 1.5px;
+    border-right: 1.5px dashed rgba(0, 230, 255, 0.4);
+}
+
+/* 플로우 각각의 행 - Grid로 완벽히 정렬 */
+.flow-row {
+    display: grid;
+    grid-template-columns: 240px 60px 240px 60px 240px;
+    align-items: center;
+    position: relative;
+}
+
+/* 왼쪽 가로 연결선 */
+.flow-row::before {
+    content: '';
+    position: absolute;
+    left: -50px;
+    top: 50%;
+    width: 50px;
+    height: 0;
+    border-top: 1.5px dashed rgba(0, 230, 255, 0.4);
+    transform: translateY(-50%);
+}
+
+/* 오른쪽 가로 연결선 (서브 페이지가 있는 행에만 적용) */
+.flow-row.sub::after {
+    content: '';
+    position: absolute;
+    right: -50px;
+    top: 50%;
+    width: 50px;
+    height: 0;
+    border-top: 1.5px dashed rgba(0, 230, 255, 0.4);
+    transform: translateY(-50%);
+}
+
+/* 노드 기본 */
+.node {
+    padding: 14px 28px;
+    border: 1.5px solid rgba(0, 230, 255, 0.4);
+    background: #040C15;
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.85);
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    text-align: center;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 알약형(pill) */
+.node.pill {
+    border-radius: 100px;
+    width: 100%;
+}
+
+/* HOME 노드 - 솔리드 채우기 */
+.node.home {
+    border-radius: 100px;
+    background: rgba(0, 230, 255, 1);
+    border-color: rgba(0, 230, 255, 1);
+    color: #040C15;
+    font-weight: 800;
+    letter-spacing: 2px;
+    padding: 16px 36px;
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+/* 화살표 */
+.arrow {
+    color: rgba(0, 230, 255, 0.5);
+    font-size: 22px;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+}
+
+.arrow.return {
+    color: rgba(0, 230, 255, 0.6);
+    font-size: 18px;
+}
+
+/* ========== DESIGN SYSTEM ========== */
+.design-system {
+    display: flex;
+    align-items: flex-end;
+    gap: 80px;
+}
+
+.colors {
+    display: flex;
+    align-items: center;
+}
+
+.color-circle {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -60px;
+}
+
+.color-circle:first-child {
+    margin-left: 0;
+    z-index: 3;
+}
+
+.color-circle:nth-child(2) {
+    z-index: 2;
+}
+
+.color-circle:nth-child(3) {
+    z-index: 1;
+}
+
+.color-circle span {
+    font-size: 32px;
+    color: #040C15;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.font-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.font-display-wrap {
+    position: relative;
+    display: inline-block;
+    line-height: 0.85;
+}
+
+.font-display {
+    font-size: 300px;
+    font-weight: 700;
+    color: rgba(0, 230, 255, 0.9);
+    letter-spacing: -10px;
+    display: inline-block;
+}
+
+.font-display.ghost {
+    position: absolute;
+    top: 12px;
+    left: 20px;
+    color: rgba(0, 230, 255, 0.35);
+    z-index: 0;
+}
+
+.font-display:not(.ghost) {
+    position: relative;
+    z-index: 1;
+}
+
+.font-name {
+    font-size: 32px;
+    color: rgba(255, 255, 255, 0.3);
+    letter-spacing: 3px;
+    margin-top: 10px;
+}
+
+/* ========== FOOTER ========== */
+.pf-footer {
+    padding: 120px 0;
+    background: #020810;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.pf-footer h2 {
+    font-size: 128px;
+    font-weight: 400;
+    letter-spacing: -2px;
+    color: rgba(0, 230, 255, 1);
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.pf-footer p {
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.45);
+    letter-spacing: 1px;
+    line-height: 2;
+}
