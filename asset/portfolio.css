@@ -45,6 +45,24 @@ ul {
     border-bottom: none;
 }
 
+/* ========== SCROLL REVEAL ========== */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1.0s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 1.0s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.scroll-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* p는 h2보다 약간 늦게 */
+.proc-section > p.scroll-reveal {
+    transition-delay: 0.25s;
+}
+
 /* h2 — 번호(span)는 위, 제목 텍스트는 아래 */
 .proc-section h2 {
     font-size: 48px;
@@ -82,7 +100,7 @@ ul {
 .brainstorming-img {
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .brainstorming-img .bs-img {
@@ -169,13 +187,13 @@ ul {
     position: relative;
 }
 
-/* 수평선 — 첫/마지막 컬럼 중앙에 맞춤 (각 컬럼이 20%이므로 10%~90%) */
+/* 수평선 — 첫/마지막 컬럼 중앙에 맞춤 (각 컬럼이 16.67%이므로 8.33%~91.67%) */
 .ia-grid::before {
     content: '';
     position: absolute;
     top: 0;
-    left: 10%;
-    right: 10%;
+    left: 8.33%;
+    right: 8.33%;
     height: 1.5px;
     background: rgba(0, 230, 255, 0.5);
 }
@@ -212,7 +230,7 @@ ul {
 }
 
 .ia-col ul li {
-    font-size: 14px;
+    font-size: 18px;
     color: rgba(255, 255, 255, 0.55);
     letter-spacing: 0.3px;
     line-height: 1.4;
@@ -383,6 +401,10 @@ ul {
 }
 
 /* ========== DESIGN SYSTEM ========== */
+.section-design {
+    padding-bottom: 150px;
+}
+
 .design-system {
     display: flex;
     align-items: flex-end;
